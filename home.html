@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Hub - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Styling for the dropdown menu */
+        .dropdown-menu {
+            display: none; /* Initially hidden */
+            max-height: 200px; /* Set maximum height for scroll */
+            overflow-y: auto; /* Enable vertical scroll */
+            transition: max-height 0.3s ease; /* Smooth dropdown effect */
+        }
+
+        /* Show dropdown when open */
+        .dropdown-menu.open {
+            display: block;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Toggle dropdown visibility when Test Prep is clicked
+            document.getElementById("testPrepDropdown").addEventListener("click", function (event) {
+                event.preventDefault();
+                const dropdownMenu = document.getElementById("dropdownMenu");
+                dropdownMenu.classList.toggle("open"); // Toggle 'open' class
+                dropdownMenu.scrollTop = 0; // Scroll to top when opened
+            });
+
+            // Hide the "Home" link if on home page
+            if (window.location.pathname.endsWith("home.html")) {
+                const homeLink = document.getElementById("home-link");
+                if (homeLink) {
+                    homeLink.style.display = "none";
+                }
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">AI Learning Hub</h1>
+            <ul class="flex space-x-6">
+                <li><a id="home-link" href="home.html" class="hover:underline">Home</a></li>
+                <li><a href="dashboard.html" class="hover:underline">Dashboard</a></li>
+                <li><a href="profile.html" class="hover:underline">Profile</a></li>
+                <li><a href="chatbot.html" class="hover:underline">Ask AI</a></li>
+                <li class="relative">
+                    <a href="#" id="testPrepDropdown" class="hover:underline">Test Prep</a>
+                    <ul id="dropdownMenu" class="dropdown-menu bg-white text-gray-800 rounded-md shadow-lg w-48 z-10">
+                        <li><a class="block p-2 hover:bg-gray-200" href="cet.html">CET</a></li>
+                        <li><a class="block p-2 hover:bg-gray-200" href="neet.html">NEET</a></li>
+                        <li><a class="block p-2 hover:bg-gray-200" href="cat.html">CAT</a></li>
+                        <li><a class="block p-2 hover:bg-gray-200" href="gate.html">GATE</a></li>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container mx-auto p-8">
+        <h2 class="text-3xl font-bold mb-4 text-center">Welcome to AI Learning Hub</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white shadow-md rounded-lg p-6 flex justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-semibold">Your Profile</h3>
+                    <p class="mt-2">Username: <span id="username">john_doe</span></p>
+                    <p class="mt-2">First Name: <span id="firstName">John</span></p>
+                    <p class="mt-2">Last Name: <span id="lastName">Doe</span></p>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <h3 class="text-xl font-semibold">AI Engineering Courses</h3>
+                <p class="mt-2">Explore various AI engineering courses.</p>
+                <a href="getstarted.html" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Get Started</a>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <h3 class="text-xl font-semibold">Personalized Courses</h3>
+                <p class="mt-2">Find AI courses tailored to your interests.</p>
+                <a href="questionnaire.html" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Take the AI Questionnaire</a>
+            </div>
+        </div>
+    </section>
+        
+    <footer class="bg-blue-600 text-white py-6">
+        <p class="text-center">&copy; 2024 AI Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

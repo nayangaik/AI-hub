@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Hub - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">AI Learning Hub</h1>
+            <ul class="flex space-x-6">
+                <li><a href="home.html" class="hover:underline">Home</a></li>
+                <li><a href="dashboard.html" class="hover:underline">Dashboard</a></li>
+                <li><a href="profile.html" class="hover:underline">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container mx-auto p-8">
+        <h2 class="text-3xl font-bold mb-4 text-center">Welcome to AI Learning Hub</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Example of Profile Box -->
+            <div class="bg-white shadow-md rounded-lg p-6 flex justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-semibold">Your Profile</h3>
+                    <p class="mt-2">Username: <span id="username">john_doe</span></p>
+                    <p class="mt-2">First Name: <span id="firstName">John</span></p>
+                    <p class="mt-2">Last Name: <span id="lastName">Doe</span></p>
+                </div>
+                <!-- Removed the Get Started button beside the profile -->
+            </div>
+
+            <!-- Other boxes can go here -->
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <h3 class="text-xl font-semibold">Engineering Courses</h3>
+                <p class="mt-2">Explore various engineering courses.</p>
+                <a href="getstarted.html" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Get Started</a>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <h3 class="text-xl font-semibold">Resources</h3>
+                <p class="mt-2">Access learning resources and materials.</p>
+                <a href="resources.html" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">View Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white py-6">
+        <p class="text-center">&copy; 2024 AI Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

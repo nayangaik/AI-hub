@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Hub - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Check if the current page is dashboard.html
+            if (window.location.pathname.endsWith("dashboard.html")) {
+                // Hide the dashboard link in the navigation
+                const dashboardLink = document.getElementById("dashboard-link");
+                if (dashboardLink) {
+                    dashboardLink.style.display = "none";
+                }
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">AI Learning Hub</h1>
+            <ul class="flex space-x-6">
+                <li><a id="home-link" href="home.html" class="hover:underline">Home</a></li>
+                <li><a id="dashboard-link" href="dashboard.html" class="hover:underline">Dashboard</a></li>
+                <li><a href="profile.html" class="hover:underline">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container mx-auto p-8">
+        <h2 class="text-3xl font-bold mb-4 text-center">Welcome to Your Dashboard</h2>
+
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-xl font-semibold">Your Courses</h3>
+            <p class="mt-2">Here you can see your opted courses and track your progress.</p>
+            <!-- Course details will go here -->
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white py-6">
+        <p class="text-center">&copy; 2024 AI Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

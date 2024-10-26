@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - AI Learning Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        function showCourses() {
+            document.getElementById("accountForm").style.display = "none"; // Hide the form
+            document.getElementById("coursesSection").style.display = "block"; // Show courses
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">AI Learning Hub</h1>
+            <ul class="flex space-x-6">
+                <li><a href="home.html" class="hover:underline">Home</a></li>
+                <li><a href="dashboard.html" class="hover:underline">Dashboard</a></li>
+                <li><a href="profile.html" class="hover:underline">Profile</a></li>
+                <!-- Removed Get Started link -->
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container mx-auto p-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Get Started</h2>
+        <p class="text-lg">Follow these simple steps to begin your learning journey:</p>
+
+        <!-- Account Creation Form -->
+        <form id="accountForm" class="mt-8 w-full max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md" onsubmit="event.preventDefault(); showCourses();">
+            <h3 class="text-2xl font-semibold mb-4">Create Your Account</h3>
+            <div class="grid grid-cols-1 gap-4">
+                <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter your first name">
+                </div>
+                <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter your last name">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter your phone number">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" required class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter your email address">
+                </div>
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                    <input type="text" id="address" name="address" required class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter your address">
+                </div>
+                <div>
+                    <label for="branch" class="block text-sm font-medium text-gray-700">Engineering Branch</label>
+                    <input type="text" id="branch" name="branch" required class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter your engineering branch">
+                </div>
+                <div>
+                    <label for="year" class="block text-sm font-medium text-gray-700">Year</label>
+                    <input type="number" id="year" name="year" required class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter your year of study">
+                </div>
+                <div>
+                    <label for="division" class="block text-sm font-medium text-gray-700">Division</label>
+                    <input type="text" id="division" name="division" required class="mt-1 p-2 border border-gray-300 rounded-md w-full" placeholder="Enter your division">
+                </div>
+            </div>
+            <button type="submit" class="mt-6 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-500">Create Account</button>
+        </form>
+
+        <!-- Engineering Courses Section -->
+        <div id="coursesSection" class="mt-12 hidden">
+            <h3 class="text-2xl font-semibold mb-4">Available Engineering Courses</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <img src="C\Users\Dell\projectfolder\photos/computer.png" alt="AI Fundamentals<" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-bold">AI Fundamentals</h4>
+                    <p class="mt-2">Duration: 2 Years</p>
+                    <p>Hours: 600</p>
+                    <p>Semester: 8</p>
+                    <p>Year: 2024</p>
+                    <p>Course Fee: Rs 15,000</p>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <img src="mech.png" alt="Machine Learning Basics" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-bold">Machine Learning Basics</h4>
+                    <p class="mt-2">Duration: 2 Years</p>
+                    <p>Hours: 1800</p>
+                    <p>Semester: 4</p>
+                    <p>Year: 2024</p>
+                    <p>Course Fee: Rs 14,000</p>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <img src="electrical.png" alt="Deep learning Specialisation" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-bold">Deep learning Specialisation</h4>
+                    <p class="mt-2">Duration: 2 Years</p>
+                    <p>Hours: 1000</p>
+                    <p>Semester: 4</p>
+                    <p>Year: 2024</p>
+                    <p>Course Fee: Rs 10,500</p>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <img src="civil.png" alt="Natural Language Processing" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-bold">Natural Language Processing</h4>
+                    <p class="mt-2">Duration: 2 Years</p>
+                    <p>Hours: 900</p>
+                    <p>Semester: 4</p>
+                    <p>Year: 2024</p>
+                    <p>Course Fee: Rs 9,500</p>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <img src="chem.png" alt="AI for Robotics" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-bold">AI for Robotics</h4>
+                    <p class="mt-2">Duration: 2 Years</p>
+                    <p>Hours: 800</p>
+                    <p>Semester: 4</p>
+                    <p>Year: 2024</p>
+                    <p>Course Fee: Rs 11,000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white py-6">
+        <p class="text-center">&copy; 2024 AI Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
